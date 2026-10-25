@@ -6,13 +6,13 @@
     "api_key_env": "ZHIPU_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
-    "throttle_sec": 1,
+    "throttle_sec": 3,
     "languages": [
       "zh",
       "en"
     ],
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "analysis_concurrency": 1,
+    "enrichment_concurrency": 1
   },
   "processing": {
     "profiles_dir": "profiles",
