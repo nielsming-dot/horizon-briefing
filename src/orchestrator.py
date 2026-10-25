@@ -786,9 +786,30 @@ class HorizonOrchestrator:
         log: bool = True,
     ) -> FilteringPipelineResult:
         """Apply score thresholding, optional topic dedup, and digest balancing."""
+        import logging as _logging
+
+        _filter_logger = _logging.getLogger("horizon.filter")
         threshold_items = []
         for item in items:
-            if self.passes_profile_filter(item, threshold):
+            passes = self.passes_profile_filter(item, threshold)
+            profile_id = (
+                item.processing.classification.profile
+                if item.processing and item.processing.classification
+                else None
+            )
+            score = (
+                item.processing.analysis.score
+                if item.processing and item.processing.analysis
+                else None
+            )
+            _filter_logger.info(
+                "filter: pass=%s profile=%s score=%s title=%s",
+                passes,
+                profile_id,
+                score,
+                item.title[:60],
+            )
+            if passes:
                 threshold_items.append(item)
         threshold_items.sort(
             key=lambda item: (
