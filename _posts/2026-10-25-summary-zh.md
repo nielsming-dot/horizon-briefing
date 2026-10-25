@@ -5,14 +5,24 @@ date: 2026-10-25
 lang: zh
 ---
 
-> 已分析 72 条内容，但没有达到重要性阈值的条目。
+> 从 72 条内容中筛选出 1 条重要资讯。
 
-今日暂无重要动态，可能原因：
-- 今天关注的信息源较平静
-- AI 评分阈值设置过高
-- 信息源种类有待扩充
+---
 
-建议：
-1. 降低当前 Profile 的过滤阈值
-2. 添加更多多样化的信息源
-3. 检查 AI 模型是否正常工作
+**医学前沿**
+1. [STAT+: After a cancer vaccine’s first success, the race is on to expand the impact](#item-medicine-news-1) ⭐️ 9.0/10
+
+---
+
+## 医学前沿
+
+<a id="item-medicine-news-1"></a>
+### [STAT+: After a cancer vaccine’s first success, the race is on to expand the impact](https://www.statnews.com/2026/10/25/mrna-cancer-vaccine-merck-moderna-esmo-intismeran-next-applications/?utm_campaign=rss) ⭐️ 9.0/10
+
+A pivotal trial of Merck and Moderna&\#x27;s mRNA cancer vaccine intismeran combined with Keytruda showed a 42% reduction in recurrence or death, marking a potential breakthrough in cancer treatment.
+
+rss · STAT News · 10月25日 08:31
+
+**标签**: `#cancer`, `#vaccine`, `#melanoma`, `#mRNA`, `#clinical-trial`
+
+---

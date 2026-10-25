@@ -5,14 +5,24 @@ date: 2026-10-25
 lang: en
 ---
 
-> Analyzed 72 items, but none met the importance threshold.
+> From 72 items, 1 important content pieces were selected
 
-No significant developments today. This might indicate:
-- A quiet day in your tracked sources
-- The AI score threshold is too high
-- Your information sources need expansion
+---
 
-Consider:
-1. Lowering the configured profile threshold
-2. Adding more diverse information sources
-3. Checking if the AI model is working correctly
+**Medical News**
+1. [STAT+: After a cancer vaccine’s first success, the race is on to expand the impact](#item-medicine-news-1) ⭐️ 9.0/10
+
+---
+
+## Medical News
+
+<a id="item-medicine-news-1"></a>
+### [STAT+: After a cancer vaccine’s first success, the race is on to expand the impact](https://www.statnews.com/2026/10/25/mrna-cancer-vaccine-merck-moderna-esmo-intismeran-next-applications/?utm_campaign=rss) ⭐️ 9.0/10
+
+A pivotal trial of Merck and Moderna&\#x27;s mRNA cancer vaccine intismeran combined with Keytruda showed a 42% reduction in recurrence or death, marking a potential breakthrough in cancer treatment.
+
+rss · STAT News · Oct 25, 08:31
+
+**Tags**: `#cancer`, `#vaccine`, `#melanoma`, `#mRNA`, `#clinical-trial`
+
+---
