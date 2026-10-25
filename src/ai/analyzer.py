@@ -150,8 +150,16 @@ class ContentAnalyzer:
             system=analysis_system_prompt(profile),
             user=user_prompt,
         )
+        logger.info(
+            "analyze response for %s (len=%d): %.400s",
+            item.id,
+            len(response or ""),
+            (response or "")[:400],
+        )
 
         result, failure = self._validate_analysis_response(response)
+        if result is not None:
+            logger.info("analyze validated %s: score=%s", item.id, result.score)
         if result is None:
             repair_response = await self.client.complete(
                 system=analysis_system_prompt(profile),
