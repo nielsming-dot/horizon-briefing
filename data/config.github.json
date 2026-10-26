@@ -6,7 +6,7 @@
     "api_key_env": "ZHIPU_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
-    "throttle_sec": 3,
+    "throttle_sec": 15,
     "languages": [
       "zh",
       "en"
