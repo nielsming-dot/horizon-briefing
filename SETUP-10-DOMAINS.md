@@ -26,12 +26,22 @@
 - **教育动态**：EdSurge、The 74、Hechinger Report（均偏美国视角）
 - **文学动态**：Literary Hub、The Millions、Guardian Books、NYT Books
 
-## 验证情况（2026-10-25）
+## 验证情况（2026-10-26 更新）
 
-- 全部源经过 curl 三轮筛选 + Horizon 真实抓取器冒烟测试；36 小时窗口取回 169 条，10 个领域全部有产出
+- 全部源经过 curl 三轮筛选 + Horizon 真实抓取器冒烟测试；10 个领域全部有产出
 - NASA Science News 因源本身 XML 格式错误被移除
 - 本机代理（fake-IP DNS）会拦截 trafilatura 全文抓取（198.18.x.x 报错），不影响 GitHub Actions 运行
 - `uv run --extra dev pytest tests/test_rss.py` 全部通过
+
+## AI Provider 调试记录（重要）
+
+1. **glm-4.7-flash（免费公共池）不可用**：全网共享容量长期过载，错误码 1305「该模型当前访问量过大」，674 次调用仅 1 次成功，调速无效
+2. **根因**：智谱「标准按量 API」与「GLM Coding Plan 套餐」是两套独立的 key/配额体系；套餐 key 调标准端点上的免费模型不享受套餐配额
+3. **正确配置**（Coding Plan 套餐 key）：
+   - `base_url`: `https://open.bigmodel.cn/api/coding/paas/v4`（套餐专属通道）
+   - `model`: `glm-5.3-flash`（套餐内模型；GLM-5.3/5.3-Flash 强制思考不可关闭）
+   - `extra_body`: `{"thinking": {"type": "enabled"}, "reasoning_effort": "low"}`——最低思考档，把单次运行从 ~2 小时压到 ~28 分钟
+4. 实测（2026-10-26 run7）：155 条分析 / 152 有效打分 / 41 条入选 / 28 分钟完成 / 0 限流
 
 ## 启用步骤
 
