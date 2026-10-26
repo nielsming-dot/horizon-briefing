@@ -12,7 +12,13 @@
       "en"
     ],
     "analysis_concurrency": 2,
-    "enrichment_concurrency": 2
+    "enrichment_concurrency": 2,
+    "extra_body": {
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "low"
+    }
   },
   "processing": {
     "profiles_dir": "profiles",
