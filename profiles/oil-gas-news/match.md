@@ -1,0 +1,7 @@
+# Oil and gas industry news profile
+
+Use this profile for the petroleum industry value chain: upstream exploration and production (projects, FIDs, licenses, drilling and field development), midstream and LNG, refining and petrochemical operations, oil-field services and equipment, national oil companies and supermajors, OPEC+ and production policy, reserves and resource estimates, M&A in oil and gas, carbon capture and emissions reduction in oil and gas operations, and China's oil and gas policy (pricing mechanisms, import and export quotas, pipeline and storage infrastructure, NOC reform).
+
+Typical items include project sanctions and startups, major discoveries with stated volumes, strategy or leadership changes at major operators including CNPC/Sinopec/CNOOC and international peers, OPEC+ decisions with quota specifics, refining margin and inventory data with baselines, regulatory and policy changes affecting production or trade, and technology results at field scale (EOR, drilling performance, digitalization) with measured outcomes.
+
+Do not route renewable power, grids, EVs, or battery storage without an oil-and-gas angle here; route those to the energy profile. Route pure commodity price moves without operational or policy substance to a low score under this profile. Route basic chemistry and catalysis research without an industry deployment context to the chemistry profile.

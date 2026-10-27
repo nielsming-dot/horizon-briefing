@@ -63,6 +63,10 @@
       "literature-news": {
         "threshold": 4.0,
         "topic_dedup": false
+      },
+      "oil-gas-news": {
+        "threshold": 6.0,
+        "topic_dedup": true
       }
     }
   },
@@ -503,6 +507,44 @@
         "enabled": true,
         "category": "lit-media",
         "profile": "literature-news"
+      },
+      {
+        "name": "Oil & Gas Journal",
+        "url": "https://www.ogj.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22%3A%22home%22%7D",
+        "enabled": true,
+        "category": "oilgas-trade",
+        "profile": "oil-gas-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "OilPrice.com",
+        "url": "https://oilprice.com/rss/main",
+        "enabled": true,
+        "category": "oilgas-markets",
+        "profile": "oil-gas-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "EIA Today in Energy",
+        "url": "https://www.eia.gov/rss/todayinenergy.xml",
+        "enabled": true,
+        "category": "oilgas-data",
+        "profile": "oil-gas-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "Google News Oil & Gas (EN)",
+        "url": "https://news.google.com/rss/search?q=oil%20gas%20industry%20when:1d&hl=en-US&gl=US&ceid=US:en",
+        "enabled": true,
+        "category": "oilgas-aggregated",
+        "profile": "oil-gas-news"
+      },
+      {
+        "name": "Google News 石油天然气 (ZH)",
+        "url": "https://news.google.com/rss/search?q=%E7%9F%B3%E6%B2%B9%20OR%20%E5%A4%A9%E7%84%B6%E6%B0%94%20%E6%B2%B9%E6%B0%94&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+        "enabled": true,
+        "category": "oilgas-aggregated-cn",
+        "profile": "oil-gas-news"
       }
     ],
     "reddit": {
@@ -586,6 +628,7 @@
       "aerospace-news",
       "chemical-news",
       "energy-news",
+      "oil-gas-news",
       "education-news",
       "literature-news"
     ],
