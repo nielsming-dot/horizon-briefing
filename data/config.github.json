@@ -265,7 +265,14 @@
         "url": "https://phys.org/rss-feed/physics-news/",
         "enabled": true,
         "category": "physics-media",
-        "profile": "physics-news",
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ],
         "content_extractor": "trafilatura"
       },
       {
@@ -273,7 +280,14 @@
         "url": "https://www.sciencedaily.com/rss/matter_energy/physics.xml",
         "enabled": true,
         "category": "physics-media",
-        "profile": "physics-news"
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ]
       },
       {
         "name": "Space.com",
@@ -302,14 +316,28 @@
         "url": "https://www.sciencedaily.com/rss/space_time/astronomy.xml",
         "enabled": true,
         "category": "astro-media",
-        "profile": "astronomy-news"
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ]
       },
       {
         "name": "Phys.org Space",
         "url": "https://phys.org/rss-feed/space-news/",
         "enabled": true,
         "category": "astro-media",
-        "profile": "astronomy-news",
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ],
         "content_extractor": "trafilatura"
       },
       {
@@ -339,14 +367,28 @@
         "url": "https://feeds.arstechnica.com/arstechnica/science",
         "enabled": true,
         "category": "aero-media",
-        "profile": "aerospace-news"
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ]
       },
       {
         "name": "Phys.org Chemistry",
         "url": "https://phys.org/rss-feed/chemistry-news/",
         "enabled": true,
         "category": "chem-media",
-        "profile": "chemical-news",
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ],
         "content_extractor": "trafilatura"
       },
       {
@@ -354,7 +396,14 @@
         "url": "https://www.sciencedaily.com/rss/matter_energy/chemistry.xml",
         "enabled": true,
         "category": "chem-media",
-        "profile": "chemical-news"
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ]
       },
       {
         "name": "Nature Chemistry",
@@ -393,7 +442,14 @@
         "url": "https://www.sciencedaily.com/rss/matter_energy/energy_and_resources.xml",
         "enabled": true,
         "category": "energy-media",
-        "profile": "energy-news"
+        "profile": [
+          "physics-news",
+          "chemical-news",
+          "energy-news",
+          "astronomy-news",
+          "medicine-news",
+          "tech-news"
+        ]
       },
       {
         "name": "EdSurge",
@@ -506,12 +562,12 @@
       "profile": "chemical-news"
     },
     "google_news": {
-      "enabled": false,
-      "query": "chemical engineering",
+      "enabled": true,
+      "query": "chemical industry OR catalyst OR chemical engineering",
       "language": "en",
       "country": "US",
       "ceid": null,
-      "max_results": 100,
+      "max_results": 30,
       "category": "news",
       "profile": "chemical-news"
     }
