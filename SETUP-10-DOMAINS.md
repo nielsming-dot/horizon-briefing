@@ -59,6 +59,11 @@ uv run horizon --hours 24
 ```
 简报落在 `data/summaries/`。定时可用 cron / launchd（macOS）。注意：本机代理若使用 fake-IP DNS，trafilatura 全文抓取会被 SSRF 防护拦截（198.18.x.x 报错），需将相关资讯域名设为直连，或接受仅用 RSS 自带摘要。
 
+## 领域扩展与修复记录（2026-10-27/28）
+
+- **化工缺席 bug 已修复**：Phys.org/ScienceDaily 等多分类源共用域名，跨分类条目被 URL 去重后归入配置顺序靠前的 profile。修复：这些源的 profile 改为候选列表，由 AI 按内容逐条路由；另启用 Google News 化工关键词兜底。修复后化工条目 0 → 28 打分 / 1 入选
+- **新增第 11 个领域「油气工业」（oil-gas-news）**：5 个验证可用源（OGJ 隐藏 RSS、OilPrice、EIA Today in Energy、Google News 油气 EN/ZH）。World Oil/Rigzone/Energy Voice/Hart Energy/Upstream/JPT 均无可用 RSS；中石油官网与《中国石油报》无公开 RSS（如需可自建 RSSHub 写自定义路由）
+
 ## 后续可加的信源（当时不可用）
 
 - 化工：C&EN、Chemistry World（无 RSS / Cloudflare 拦截）→ 可自建 RSSHub 实例补
