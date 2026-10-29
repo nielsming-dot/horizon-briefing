@@ -67,6 +67,10 @@
       "oil-gas-news": {
         "threshold": 6.0,
         "topic_dedup": true
+      },
+      "chem-products": {
+        "threshold": 5.5,
+        "topic_dedup": true
       }
     }
   },
@@ -545,6 +549,28 @@
         "enabled": true,
         "category": "oilgas-aggregated-cn",
         "profile": "oil-gas-news"
+      },
+      {
+        "name": "PlasticsToday",
+        "url": "https://www.plasticstoday.com/rss.xml",
+        "enabled": true,
+        "category": "chemprod-trade",
+        "profile": "chem-products",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "Google News 化工品 (ZH)",
+        "url": "https://news.google.com/rss/search?q=%E8%81%9A%E4%B8%99%E7%83%AF%20OR%20%E8%81%9A%E4%B9%99%E7%83%AF%20OR%20PVC%20OR%20PTA%20OR%20%E5%A4%A7%E7%82%BC%E5%8C%96&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+        "enabled": true,
+        "category": "chemprod-aggregated-cn",
+        "profile": "chem-products"
+      },
+      {
+        "name": "Google News Polymers (EN)",
+        "url": "https://news.google.com/rss/search?q=polypropylene%20OR%20polyethylene%20market%20when:2d&hl=en-US&gl=US&ceid=US:en",
+        "enabled": true,
+        "category": "chemprod-aggregated",
+        "profile": "chem-products"
       }
     ],
     "reddit": {
@@ -627,6 +653,7 @@
       "astronomy-news",
       "aerospace-news",
       "chemical-news",
+      "chem-products",
       "energy-news",
       "oil-gas-news",
       "education-news",
