@@ -9,7 +9,7 @@ GitHub Actions 云端管道（每日北京 07:00 自动运行，40-60 分钟）
   45+ 信源采集 → GLM 按领域打分过滤（0-10 分）→ 高分条目深度摘要（背景/影响/参考链接）
   → 中英双语 Markdown 简报，产出两份：gh-pages 分支（云端持久化）+ 官方预览站
         ↓ （每日 08:40 / 20:00，launchd 定时自动执行 sync.sh，全量自愈同步）
-本地知识库 /Users/niels/Documents/newsletter-knowledge/briefings/
+本地知识库 /Users/niels/Library/NewsletterKnowledge/briefings/
         ↓ （网站构建时读取）
 网站项目（Cursor 开发）→ 构建 → 发布到个人网站（含授权访问）
 ```
@@ -24,14 +24,16 @@ GitHub Actions 云端管道（每日北京 07:00 自动运行，40-60 分钟）
 
 ### 2.1 主数据源：本地知识库（构建时读取，最简单）
 
+> 注：知识库位于 `~/Library/NewsletterKnowledge/`（2026-11-11 迁移；`~/Documents` 受 macOS 隐私保护，定时同步任务无法写入）
+
 ```
-/Users/niels/Documents/newsletter-knowledge/briefings/
+/Users/niels/Library/NewsletterKnowledge/briefings/
   YYYY-MM-DD-summary-zh.md   # 每日中文简报
   YYYY-MM-DD-summary-en.md   # 每日英文简报
 ```
 
 - 当前历史从 2026-10-25 起，每天新增 2 个文件，每文件 40-80 条条目
-- 文件由 `sync.sh` 每日 08:40 / 20:00 自动同步（早间管道跑完后），发布前也可手动执行 `/Users/niels/Documents/newsletter-knowledge/sync.sh` 拉取最新
+- 文件由 `sync.sh` 每日 08:40 / 20:00 自动同步（早间管道跑完后），发布前也可手动执行 `/Users/niels/Library/NewsletterKnowledge/sync.sh` 拉取最新
 - **静态构建即可**：构建时把该目录全部读入生成页面，无需数据库、无需运行时抓取
 
 ### 2.2 备用数据源（了解即可，一般用不到）
@@ -140,7 +142,7 @@ profile 与中文版块名对照：ai-news=AI 动态、tech-news=科技新闻、
 ### 4.3 构建与发布流程（Cursor 的职责）
 
 ```
-1. （可选但推荐）执行 /Users/niels/Documents/newsletter-knowledge/sync.sh 拉最新数据
+1. （可选但推荐）执行 /Users/niels/Library/NewsletterKnowledge/sync.sh 拉最新数据
 2. 读取 briefings/*.md → 按第 3 节契约解析 → 生成静态页面
 3. 构建产物部署到用户选择的托管（Vercel / Cloudflare Pages / 自有服务器均可）
 4. 每日更新：手动重新构建发布，或配托管平台的 webhook/定时构建
